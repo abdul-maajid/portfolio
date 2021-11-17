@@ -2,11 +2,26 @@
   "name": "react-portfolio-starter-code-files",
   "version": "0.1.0",
   "private": true,
+  "description": "This repository contains Final code for The Portfolio Website in ReactJS. <br />",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdul-maajid/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdul-maajid/portfolio/issues"
+  },
+  "homepage": "https://abdul-maajid.github.io/portfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "framer-motion": "^4.1.17",
+    "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,6 +34,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
