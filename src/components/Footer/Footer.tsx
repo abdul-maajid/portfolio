@@ -13,11 +13,10 @@ export function Footer() {
         <span>A</span>
         <span>Maajid</span>
       </a>
-      <div>
+      {/* <div>
         <p>
-          © {(new Date()).getFullYear()} All rights reserved.
         </p>
-      </div>
+      </div> */}
 
       <div className="social-media">
         <a
@@ -45,7 +44,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://discord.com/users/"
+          href="https://discord.com/users/abdulmaajid#7829"
           target="_blank"
           rel="noreferrer"
         >

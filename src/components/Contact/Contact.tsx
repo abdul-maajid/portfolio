@@ -1,6 +1,7 @@
 import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg"
+import linkedinIcon from "../../assets/linkedin.svg";
 import { Form } from "../Form/Form";
 
 
@@ -18,8 +19,8 @@ export function Contact() {
           <a href="mailto:amaajid0@gmail.com">amaajid0@gmail.com</a>
         </div>
         <div>
-          <img src={phoneIcon} alt="Email" />
-          <a href="tel:+5531981213843">(31) 98121-3843</a>
+          <img src={linkedinIcon} alt="linkedin" />
+          <a href="https://www.linkedin.com/in/amaajid007/" target="_blank">Contact At</a>
         </div>
       </div>
       <Form></Form>
