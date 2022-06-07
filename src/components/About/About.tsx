@@ -10,9 +10,20 @@ import etherIcon from "../../assets/ether-icon.svg";
 import solIcon from "../../assets/sol-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useState } from "react";
 
 
 export function About() {
+  const [profileStyle, setProfileStyle] = useState({
+    backgroundImage: `url(${profileImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    height: '100%',
+    filter: 'grayscale(100%) opacity(0.7)',
+    transition: 'all 0.3s'
+  });
+
   return (
     <Container id="about">
       <div className="about-text">
@@ -86,8 +97,16 @@ export function About() {
         </div>
       </div>
       <div className="about-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
-          <img src={profileImage} alt="Profile" />
+        <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000} style={{ height: '100%' }}>
+          <div style={profileStyle}
+            onMouseEnter={e => {
+              setProfileStyle(Object.assign({}, profileStyle, { filter: 'grayscale(0%) opacity(1)' }));
+            }}
+            onMouseLeave={e => {
+              setProfileStyle(Object.assign({}, profileStyle, { filter: 'grayscale(100%)  opacity(0.7)' }));
+            }}
+          ></div>
+          {/* <img src={profileImage} alt="Profile" /> */}
         </ScrollAnimation>
       </div>
     </Container>
